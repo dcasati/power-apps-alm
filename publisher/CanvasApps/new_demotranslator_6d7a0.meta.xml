@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>new_demotranslator_6d7a0</Name>
+  <AppVersion>2022-01-26T03:24:42Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.21123.25.0</CreatedByClientVersion>
+  <MinClientVersion>3.21123.25.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","sienaVersion":"ca542a22-f947-4670-938f-364dc64c16a3","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.21123.25","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(168, 0, 0, 1)</BackgroundColor>
+  <DisplayName>Custom Translator Demo</DisplayName>
+  <Description></Description>
+  <CommitMessage></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"84f8332e-dc36-4c7d-97ec-d97df49281f4":{"id":"/providers/microsoft.powerapps/apis/shared_translatorv2","xrmConnectionReferenceLogicalName":"new_CustomTranslate","displayName":"Microsoft Translator V2","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1481/1.0.1481.2460/translatorv2/icon.png","dataSources":["MicrosoftTranslatorV2"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"sharedConnectionId":"01f19e08-4917-46b8-b9fb-a57ac1a572ec","bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Languages"],"isCustomApiSolutionAware":false},"db4aaf12-8071-4d29-9e7e-03fb3223067a":{"id":"/providers/Microsoft.PowerApps/apis/shared_new-5ftranslator-20api-5f392841c09671d392","displayName":"Translator API","iconUri":"https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png","dataSources":["CustomTranslator"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Translation"],"customApiLogicalName":"new_translator-20api","isCustomApiSolutionAware":true}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"componenttype":372,"logicalname":"new_translator-20api","componenttypeplatformname":"connector"},{"componenttype":10049,"logicalname":"new_CustomTranslate","componenttypeplatformname":"ConnectionReference"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/new_demotranslator_6d7a0_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/new_demotranslator_6d7a0_DocumentUri.msapp</DocumentUri>
+</CanvasApp>
