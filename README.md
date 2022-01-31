@@ -30,7 +30,21 @@ az ad  app credential reset         \
 
 Navigate to the `Power Platform admin center` at `https://admin.powerplatform.microsoft.com`. On this step we will connect the new Service Principal user (created above) with our Power Platform Environment. Select an environment then click on `S2S Apps`
 
-[alm picture]
+![powerplatform-alm-1](https://user-images.githubusercontent.com/3240777/151890253-cf8d68c8-858f-4f90-a0d8-2563adddc2ca.png)
+
+Create a new user by clicking on "Setup app user"
+
+![powerplatform-alm-2](https://user-images.githubusercontent.com/3240777/151890339-6c9a8ae9-261c-45a2-8044-90e0bf77ecbc.png)
+
+Select the Service Principal user previously created here.
+
+![powerplatform-alm-3](https://user-images.githubusercontent.com/3240777/151890413-865cf7c8-e1a2-4918-88eb-c90c2d06ec86.png)
+
+Under `Security roles`, click on the pencil icon and select `System Administrator` from the dropbown options
+
+![powerplatform-alm-4](https://user-images.githubusercontent.com/3240777/151890510-2c190b10-880d-4638-89fa-299647396516.png)
+
+![powerplatform-alm-5](https://user-images.githubusercontent.com/3240777/151890525-ef90e87d-57ac-4762-bc44-a985d6eca4f4.png)
 
 Create an authentication for `pac`. 
 ```bash
