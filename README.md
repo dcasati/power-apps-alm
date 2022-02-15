@@ -78,3 +78,14 @@ pac solution unpack --zipfile solution.zip --folder publisher
  git commit -m 'initial import'
  git push
  ```
+
+Create Github secret
+
+```bash
+gh secret set -f - << EOF
+URL=${POWER_APPS_URL}
+TENANT_ID=$(jq -r .tenant pp_alm-client-secret.rc)
+CLIENT_ID=$(jq -r .appId pp_alm-client-secret.rc)
+CLIENT_SECRET=$(jq -r .password pp_alm-client-secret.rc)
+EOF
+```
