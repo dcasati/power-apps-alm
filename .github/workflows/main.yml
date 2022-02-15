@@ -1,0 +1,43 @@
+name: CI / CD
+
+on:
+  push:
+    paths:
+      - solutions/**
+  workflow_dispatch:
+
+concurrency:
+  group: production
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: pack custom_translator
+        uses: ./.github/actions/pack-solution
+        with:
+          name: custom_translator
+      - uses: actions/upload-artifact@v2
+        with:
+          name: packed-solutions
+          path: packed-solutions
+  deploy:
+    environment: production
+    if: ${{ github.ref_name == 'main' }}
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: packed-solutions
+      - name: Import custom_translator
+        uses: microsoft/powerplatform-actions/import-solution@v0
+        with:
+          environment-url: ${{ secrets.URL }}
+          app-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          tenant-id: ${{ secrets.TENANT_ID }}
+          solution-file: con_core_managed.zip

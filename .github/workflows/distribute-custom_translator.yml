@@ -1,0 +1,36 @@
+name: Distribute Custom Translator
+
+on:
+  push:
+    paths:
+      - solutions/custom_translator/**
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: pack custom_translator
+        uses: ./.github/actions/pack-solution
+        with:
+          name: custom_translator
+      - uses: actions/upload-artifact@v2
+        with:
+          name: packed-solutions
+          path: packed-solutions
+  development-admissions:
+    environment: dev-admissions
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: packed-solutions
+      - uses: microsoft/powerplatform-actions/import-solution@v0
+        with:
+          environment-url: ${{ secrets.URL }}
+          app-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          tenant-id: ${{ secrets.TENANT_ID }}
+          solution-file: custom_translator_managed.zip
