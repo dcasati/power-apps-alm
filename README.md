@@ -7,10 +7,12 @@ TL;DR - clone this repo. Run the `run.sh` command to get your environment setup.
 Fill in the following details:
 
 ```bash
+cat <<EOF > deploy.rc
 AAD_SP_NAME="myALMdemo"
 PAC_AUTH_NAME="alm-demo-cli"
 POWER_APPS_URL="https://orgXXXXXX.crm.dynamics.com"
 POWER_APPS_AZURE_USER="admin@XYZ.onmicrosoft.com"
+EOF
 ```
 
 Create a Service Principal on Azure using your current user. For this example, we will be using a user without an Azure subscription
